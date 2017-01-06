@@ -14,6 +14,7 @@ absv :: Vector -> Double
 invv :: Vector -> Vector
 
 lineToV :: Line -> Vector
+lineToVs :: Line -> [Vector]
 absl :: Line -> Double
 divl :: Line -> Double -> Line
 
@@ -29,3 +30,5 @@ lineToV (Line a b) = subv b a
 absl l = absv (lineToV l)
 
 divl (Line (Vector x1 y1) (Vector x2 y2)) s = Line (Vector x1 y1) (addv (Vector x1 y1) (Vector ((x2 - x1) / s) ((y2 - y1) / s)))
+
+lineToVs (Line v1 v2) = [v1, v2]
