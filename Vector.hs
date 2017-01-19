@@ -1,10 +1,10 @@
 module Vector where
 
 data Vector = Vector Double Double 
-	deriving (Show, Eq)
+	deriving (Ord, Show, Eq)
 
 data Line = Line Vector Vector 
-	deriving (Show, Eq)
+	deriving (Ord, Show, Eq)
 
 addv :: Vector -> Vector -> Vector
 subv :: Vector -> Vector -> Vector
